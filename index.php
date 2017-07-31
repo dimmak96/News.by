@@ -8,9 +8,10 @@ $url = $_GET['url'];
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="/css/styles.css" type="text/css"/>
-    <script src="/js/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    
+	<script type="text/javascript" src="/js/script.js"></script>
 </head>
 <body style="background: url(images/_mg_1583_22_36dr.jpg) no-repeat">
 <div class="container">
@@ -20,9 +21,20 @@ $url = $_GET['url'];
         switch ($url) {
             case NULL:
                 echo "<p>Главная</p>";
+				if(isset($_SESSION['logged_user'])){
+					echo '<div class="alert alert-success">
+  <strong>Успех!</strong> Вы успешно зашли.
+</div>';
+				}
                 break;
             case '/':
                 echo "<p>Главная</p>";
+				if(isset($_SESSION['logged_user'])){
+					echo '<div class="alert alert-success">
+  <strong>Успех!</strong> Вы успешно зашли.
+</div>';
+				}
+				
                 break;
             case 'all-news':
                 include "all_news.php";

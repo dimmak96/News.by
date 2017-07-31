@@ -27,8 +27,7 @@
 			if(empty($errors)){
 				
 				mysqli_query($connection, "INSERT INTO news (creation_date,image,title, content) VALUES (NOW(),'".basename($_FILES["image"]["name"])."','".$_POST['title']."','".$_POST['content']."')");
-				$_POST['title']='';
-				$_POST['content']='';
+				
 				echo '<div class="alert alert-success">'."Новость успешно добавлена".'</div>';
 			} else{
 				echo '<div class="alert alert-danger">'.$errors[0].'</div>';

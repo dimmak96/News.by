@@ -41,3 +41,17 @@
 	background-color:#6c7684;
 	display:none;
 }
+.comment:hover .icons{
+	display:block !important;
+}
+.icon{	
+	color:#8c9bcc;
+}
+.icon:hover{
+	text-decoration:none;
+	color:#4289f4;
+}
+.comment-icons{
+	
+	padding-left:3%;
+}
